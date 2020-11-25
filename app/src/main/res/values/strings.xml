@@ -19,4 +19,10 @@
         <item>Near hartono Mall</item>
     </string-array>
 
+    <array name="hotelImg">
+        <item>@drawable/img_hotel1</item>
+        <item>@drawable/img_hotel2</item>
+        <item>@drawable/img_hotel3</item>
+    </array>
+
 </resources>
