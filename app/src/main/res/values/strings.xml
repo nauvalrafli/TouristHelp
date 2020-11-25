@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Tourist Help</string>
+
+    <string-array name="hotelname">
+        <item>Hotel Wisnugraha Syariah</item>
+        <item>Ndalem Gusti Ayu</item>
+        <item>Sasono Putro Guest House</item>
+    </string-array>
+
+    <string-array name="hotelharga">
+        <item>202.000</item>
+        <item>160.000</item>
+        <item>155.000</item>
+    </string-array>
+
+    <string-array name="hotellokasi">
+        <item>Near Pamella Satu Supermarket</item>
+        <item>Near hartono Mall</item>
+        <item>Near hartono Mall</item>
+    </string-array>
+
+</resources>

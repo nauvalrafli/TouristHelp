@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvCard">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="150dp"
+        android:layout_height="220dp"
+        android:orientation="vertical"
+        android:background="#6DE3FAFD">
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ivHotel"
+                android:adjustViewBounds="true"
+                android:background="@drawable/abc_vector_test"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:text="Hotel Majalengka"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#E88F24"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            android:text="220.000"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="right"
+            android:text="Dekat Sini"
+            android:textColor="#5E6A6A"
+            />
+
+    </LinearLayout>
+</TextView>
