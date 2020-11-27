@@ -3,31 +3,36 @@ package com.example.touristhelp
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Adapter
+import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
+import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 
-class HotelAdapter(private val dataSet: Array<String>) :
-        RecyclerView.Adapter<HotelAdapter.ViewHolder>() {
+class HotelAdapter(private val list : ArrayList<Hotel>) :RecyclerView.Adapter<HotelAdapter.MyHolder>() {
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val textView: TextView
-
-        init {
-            textView = view.findViewById(R.id.tvCard)
-        }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {
+        return MyHolder(LayoutInflater.from(parent.context).inflate(R.layout.custom_card,parent,false))
     }
 
-    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(viewGroup.context)
-                .inflate(R.layout.custom_card, viewGroup, false)
+    override fun onBindViewHolder(holder: HotelAdapter.MyHolder, position: Int) {
+        val hotels: Hotel = list.get(position)
 
-        return ViewHolder(view)
+        holder.nama.text = hotels.nama
+        holder.harga.text = hotels.harga
+        holder.lokasi.text = hotels.lokasi
+        holder.gambar.setImageURI(hotels.gambar)
     }
 
-    override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
-        viewHolder.textView.text = dataSet[position]
+    override fun getItemCount(): Int = 3
+
+    inner class MyHolder (val view: View) : RecyclerView.ViewHolder(view) {
+        val nama = itemView.findViewById<TextView>(R.id.tvNameCard)
+        val harga = itemView.findViewById<TextView>(R.id.tvPriceCard)
+        val lokasi = itemView.findViewById<TextView>(R.id.tvLocCard)
+        val gambar = itemView.findViewById<ImageView>(R.id.ivPicCard)
     }
 
-    override fun getItemCount() = dataSet.size
 }

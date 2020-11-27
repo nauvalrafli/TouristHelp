@@ -15,10 +15,109 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tvNgasal"
-            android:text="Halo"
+            android:text="Biodata Pemesan"
+            android:textSize="30sp"
+            android:layout_marginStart="20dp"
+            android:id="@+id/tvBio"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            />
+
+        <EditText
+            android:hint="Nama"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBio"
+            android:id="@+id/etNama"
+            style="@style/MyTvStyle"
+            />
+
+        <EditText
+            style="@style/MyTvStyle"
+            android:id="@+id/etPhone"
+            android:hint="Telepon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etNama"
+            />
+
+        <EditText
+            style="@style/MyTvStyle"
+            android:id="@+id/etEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPhone"
+            android:hint="E-mail"
+            />
+
+        <EditText
+            style="@style/MyTvStyle"
+            android:id="@+id/etPassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etEmail"
+            android:hint="Password untuk ambil"
+            />
+
+        <EditText
+            style="@style/MyTvStyle"
+            android:id="@+id/etGender"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPassword"
+            android:hint="Jenis kelamin"
+            />
+
+        <EditText
+            style="@style/MyTvStyle"
+            android:id="@+id/etLocation"
+            android:hint="Lokasi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etGender"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Car_Id"
+            android:id="@+id/etIdCar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etLocation"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Pesanan"
+            android:id="@+id/tvNamaPesan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etIdCar"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvHargaPesan"
+            android:textColor="@color/black"
+            android:text="Harga Pesanan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNamaPesan"
+            android:layout_marginStart="10dp"
+            android:textSize="18sp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btBayar2"
+            android:text="Bayar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvHargaPesan"
+            android:backgroundTint="@color/teal_200"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

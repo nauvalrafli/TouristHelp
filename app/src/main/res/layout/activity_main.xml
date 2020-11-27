@@ -33,100 +33,14 @@
             android:textSize="20sp"
             />
 
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="220dp"
             android:orientation="horizontal"
-            >
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="150dp"
-                android:layout_height="220dp"
-                >
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="145dp"
-                    android:layout_height="145dp"
-                    android:layout_margin="2dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:background="@drawable/img_hotel1"/>
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Hotel Wisnugraha Sya.."
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="220.000"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12sp"
-                    android:text="Near Pamella Satu Su.."
-                    android:textAlignment="textEnd"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="150dp"
-                android:layout_height="220dp"
-                android:layout_marginStart="40dp">
-
-                <ImageView
-                    android:id="@+id/imageViewx"
-                    android:layout_width="145dp"
-                    android:layout_height="145dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:background="@drawable/img_hotel2"
-                    android:layout_margin="2dp"/>
-
-                <TextView
-                    android:id="@+id/textViewx"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ndalem Gusti Ayu"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageViewx" />
-
-                <TextView
-                    android:id="@+id/textView2x"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="160.000"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textViewx" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12sp"
-                    android:text="Near Hartono Mall"
-                    android:textAlignment="textEnd"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2x" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-        </LinearLayout>
+            android:id="@+id/rvHotel"
+            android:scrollbars="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -138,17 +52,11 @@
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="220dp"
-            android:id="@+id/recyclerView">
+            android:id="@+id/rvCar"
+            android:scrollbars="horizontal"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="220dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="22dp"
-                android:scrollbars="horizontal"
-                android:id="@+id/cvMobil"
-                />
-        </androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
-
 </layout>
