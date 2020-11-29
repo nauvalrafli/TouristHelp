@@ -33,12 +33,12 @@
             />
 
         <EditText
-            style="@style/MyTvStyle"
             android:id="@+id/etPhone"
+            style="@style/MyTvStyle"
             android:hint="Telepon"
+            android:inputType="number"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/etNama"
-            />
+            app:layout_constraintTop_toBottomOf="@id/etNama" />
 
         <EditText
             style="@style/MyTvStyle"
@@ -49,12 +49,12 @@
             />
 
         <EditText
-            style="@style/MyTvStyle"
             android:id="@+id/etPassword"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etEmail"
+            style="@style/MyTvStyle"
             android:hint="Password untuk ambil"
-            />
+            android:inputType="number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
         <EditText
             style="@style/MyTvStyle"
@@ -73,17 +73,14 @@
             />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Car_Id"
             android:id="@+id/etIdCar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etLocation"
-            android:textSize="18sp"
-            android:textColor="@color/black"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            />
+            android:text="car id"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etLocation" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -93,6 +90,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etIdCar"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
             android:textColor="@color/black"
             android:textSize="18sp"
             />

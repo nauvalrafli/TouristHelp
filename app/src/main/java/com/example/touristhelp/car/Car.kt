@@ -8,4 +8,6 @@ data class Car (
         val hire_cost : Int,
         val capacity : Int,
         val status : String
-)
+) {
+
+}

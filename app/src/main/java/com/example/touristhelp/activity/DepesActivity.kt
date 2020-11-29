@@ -1,5 +1,6 @@
 package com.example.touristhelp.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
@@ -13,8 +14,12 @@ class DepesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_depes)
-
-
+        val intent = Intent()
+        binding.tvHasil.text = intent.getStringExtra("Hasil")
     }
 
+    fun goMain() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
 }

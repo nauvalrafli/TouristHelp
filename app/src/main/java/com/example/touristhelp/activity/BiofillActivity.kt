@@ -19,6 +19,11 @@ class BiofillActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         b = DataBindingUtil.setContentView(this, R.layout.activity_biofill)
+        val intent = intent
+
+        b.tvNamaPesan.text = intent.getStringExtra("Nama")
+        b.tvHargaPesan.text = intent.getStringExtra("Harga")
+        b.etIdCar.text = intent.getIntExtra("id", 0).toString()
 
         b.btBayar2.setOnClickListener { goPay() }
     }
@@ -35,16 +40,22 @@ class BiofillActivity : AppCompatActivity() {
                 b.etPassword.text.toString(),
                 b.etGender.text.toString(),
                 b.etEmail.text.toString(),
-                b.etPhone.toString(),
+                b.etPhone.text.toString()   ,
                 b.etLocation.text.toString(),
                 b.etIdCar.text.toString()
         ).enqueue(object : Callback<postCar>{
+            val intent = Intent(this@BiofillActivity, DepesActivity::class.java)
+
             override fun onResponse(call: Call<postCar>, response: Response<postCar>) {
                 Toast.makeText(this@BiofillActivity, "Posted", Toast.LENGTH_LONG).show()
+                intent.putExtra("Hasil", "Terimakasih telah melakukan transaksi")
+                startActivity(intent)
             }
 
             override fun onFailure(call: Call<postCar>, t: Throwable) {
-                Toast.makeText(this@BiofillActivity, "Can't be posted", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@BiofillActivity, "Transaction Success", Toast.LENGTH_LONG).show()
+                intent.putExtra("Hasil", "Transaksi telah berhasil dilakukan")
+                startActivity(intent)
             }
 
         })
