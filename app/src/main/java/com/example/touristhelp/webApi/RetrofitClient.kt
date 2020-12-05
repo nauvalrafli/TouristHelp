@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 //  http://17ba1752995f.ngrok.io/car_rental/index.php
 
 object RetrofitClient {
-    private const val base_url = "http://17ba1752995f.ngrok.io/"
+    private const val base_url = "http://12eb83e08361.ngrok.io/"
 
     val instance : Api by lazy {
         val retrofitBuilder = Retrofit.Builder()
